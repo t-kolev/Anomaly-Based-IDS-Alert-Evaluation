@@ -1,0 +1,81 @@
+{
+    "name": "portscan_detection_full",
+    "display_name": "Port Scan Detection (High)",
+    "description": "This case template provides steps to analyze and respond to potential port scan activities with all available data from the alert.",
+    "author": "DFIR-IRIS",
+    "title_prefix": "[SCAN]",
+    "summary": "# Context\nThis case relates to a potential port scan detected in the network.\n\\# Actions\nEnsure the detection is validated and, if malicious, determine the impact and mitigate the threat.",
+    "tags": [
+        "portscan",
+        "network",
+        "reconnaissance",
+        "high"
+    ],
+    "tasks": [
+        {
+            "title": "Validate Port Scan Detection",
+            "description": "Verify the alert for accuracy. Identify if this is a legitimate port scan or a false positive.",
+            "tags": [
+                "validation",
+                "portscan"
+            ]
+        },
+        {
+            "title": "Identify Source of Scan",
+            "description": "Determine the source IP of the port scan. Cross-check with known assets and reputation databases.",
+            "tags": [
+                "identify",
+                "source"
+            ]
+        },
+        {
+            "title": "Assess Impact",
+            "description": "Assess if the scan has resulted in any unauthorized access or compromise of systems.",
+            "tags": [
+                "impact",
+                "assessment"
+            ]
+        },
+        {
+            "title": "Mitigate Threat",
+            "description": "Block the source IP and adjust firewall rules as necessary to prevent further scans.",
+            "tags": [
+                "mitigation",
+                "firewall"
+            ]
+        },
+        {
+            "title": "Review Flow Data",
+            "description": "Analyze the flow data from the alert to identify patterns or anomalies.",
+            "tags": [
+                "flow",
+                "analysis"
+            ]
+        }
+    ],
+    "note_directories": [
+        {
+            "title": "Network Details",
+            "notes": [
+                {
+                    "title": "Source and Destination",
+                    "content": "# Network Details\n\n- Record the source IP and port.\n- Record the destination IP and port.\n- Note the protocol (e.g., TCP, UDP) and direction of the traffic.\n\n# Additional Notes\n\n- Mention any anomalies or patterns observed in the network traffic.\n"
+                }
+            ]
+        },
+        {
+            "title": "Remediation",
+            "notes": [
+                {
+                    "title": "Actions Taken",
+                    "content": "# Remediation Steps\n\n- Document any IPs blocked and firewall rules updated.\n- List any tools or scripts used during the remediation process.\n"
+                },
+                {
+                    "title": "Incident Summary",
+                    "content": "# Summary of the Incident\n\n- Provide a summary of the root cause.\n- List follow-up actions or recommendations for preventing similar incidents.\n"
+                }
+            ]
+        }
+    ],
+    "classification": "information-gathering:scanner"
+}

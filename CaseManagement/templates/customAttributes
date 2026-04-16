@@ -1,0 +1,125 @@
+{
+    "Flow Details": {
+        "flow_pkts_toserver": {
+            "type": "input_string",
+            "mandatory": false,
+            "value": ""
+        },
+        "flow_pkts_toclient": {
+            "type": "input_string",
+            "mandatory": false,
+            "value": ""
+        },
+        "flow_bytes_toserver": {
+            "type": "input_string",
+            "mandatory": false,
+            "value": ""
+        },
+        "flow_bytes_toclient": {
+            "type": "input_string",
+            "mandatory": false,
+            "value": ""
+        },
+        "flow_duration": {
+            "type": "input_string",
+            "mandatory": false,
+            "value": ""
+        },
+        "flow_state": {
+            "type": "input_select",
+            "mandatory": false,
+            "options": [
+                "NEW",
+                "ESTABLISHED",
+                "CON",
+                "CLOSED",
+                "OTHER"
+            ],
+            "value": "NEW"
+        }
+    },
+    "Metadata": {
+        "detection_time": {
+            "type": "input_datetime",
+            "mandatory": false,
+            "value": ""
+        },
+        "protocol": {
+            "type": "input_select",
+            "mandatory": false,
+            "options": [
+                "TCP",
+                "UDP",
+                "ICMP",
+                "Other"
+            ],
+            "value": "TCP"
+        },
+        "severity": {
+            "type": "input_select",
+            "mandatory": false,
+            "options": [
+                "Low",
+                "Medium",
+                "High"
+            ],
+            "value": "Low"
+        },
+        "distance_to_centroid": {
+            "type": "input_string",
+            "mandatory": false,
+            "value": ""
+        }
+    },
+    "Alert Details": {
+        "signature": {
+            "type": "input_string",
+            "mandatory": false,
+            "value": ""
+        },
+        "action": {
+            "type": "input_select",
+            "mandatory": false,
+            "options": [
+                "allowed",
+                "blocked"
+            ],
+            "value": "allowed"
+        },
+        "src_ip": {
+            "type": "input_string",
+            "mandatory": false,
+            "value": ""
+        },
+        "src_port": {
+            "type": "input_string",
+            "mandatory": false,
+            "value": ""
+        },
+        "dest_ip": {
+            "type": "input_string",
+            "mandatory": false,
+            "value": ""
+        },
+        "dest_port": {
+            "type": "input_string",
+            "mandatory": false,
+            "value": ""
+        },
+        "event_type": {
+            "type": "input_string",
+            "mandatory": false,
+            "value": "alert"
+        },
+        "pkt_src": {
+            "type": "input_string",
+            "mandatory": false,
+            "value": ""
+        },
+        "category": {
+            "type": "input_string",
+            "mandatory": false,
+            "value": ""
+        }
+    }
+}
