@@ -25,8 +25,9 @@ To run the project, ensure you have the following installed:
 Clone the repository:
 
 ```bash
-git clone <your-github-repository-url>
-cd <your-repository-name>
+git clone https://github.com/t-kolev/Anomaly-Based-IDS-Alert-Evaluation
+
+cd Anomaly-Based-IDS-Alert-Evaluation
 ```
 
 Install the required Python libraries:
